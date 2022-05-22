@@ -10,6 +10,7 @@ function App() {
       <NaVBar></NaVBar>
       <Routes>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/' element={<Home></Home>}></Route>
         <Route path='*' element={<div>Not Found</div>}></Route>
         </Routes>
       <Footer></Footer>

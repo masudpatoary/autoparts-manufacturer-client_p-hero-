@@ -9,7 +9,7 @@ const useParts = () => {
         .then(res=>res.json())
         .then(data=>setAutoparts(data))
       
-    }, [])
+    }, [autoparts])
     
 
     return [autoparts, setAutoparts];

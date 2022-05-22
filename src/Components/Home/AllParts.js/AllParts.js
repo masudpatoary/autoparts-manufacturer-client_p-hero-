@@ -6,17 +6,18 @@ import Parts from './Parts';
 const AllParts = () => {
     const [autoparts] = useParts()
     return (
-        <div>
-            <h1 className='tect-center fw-bold my-2'>Inventories of Rolls Parts</h1>
+        <div className='mt-10'>
+            <h1 className='text-center text-xl font-bold my-2'>Currently Available Parts</h1>
             <div className='w-100 flex flex-wrap p-md-5 p-sm-2 justify-center '>
                 {
                     autoparts.map(parts => <Parts
                         key={parts._id}
+                        id={parts._id}
                         model={parts.model}
                         img={parts.imgUrl}
                         name={parts.name}
-                        details={parts.details}
                         price={parts.price}
+                        details={parts.details}
                         minOrderQty={parts.minOrderQty}
                         inStockQty={parts.inStockQty}
                     ></Parts>)
