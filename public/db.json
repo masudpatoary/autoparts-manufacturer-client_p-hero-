@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Front Suspension",
+        "model": "FS-2022-1",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/front-suspension.jpg",
+        "details": "Front suspension operation is pretty straightforward. All suspension systems include springs and dampers of some kind. When the vehicle travels down the road, the springs support the vehicle and absorb impacts from bumps, while the dampers control the spring oscillations.",
+        "price": 800,
+        "minOrderQty": 50,
+        "inStockQty": 100000
+        
+    },
+    {
+        "name": "Rear Suspension",
+        "model": "RS-2022-1",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/rear-suspension.jpg",
+        "details": "The rear suspension of a luxury coupe is designed to maximize comfort and will have a softer suspension that absorbs more movement. A rear-drive sports car will require a stiffer suspension that allows power to be transferred from the drive shaft to the rear wheels more efficiently.",
+        "price": 900,
+        "minOrderQty": 50,
+        "inStockQty": 100000
+        
+    },
+    {
+        "name": "Break Disk",
+        "model": "BD-250",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/break-disk.jpg",
+        "details": "The brake disc (or rotor) is the rotating part of a wheel's disc brake assembly, against which the brake pads are applied. The material is typically gray iron, a form of cast iron.",
+        "price": 300,
+        "minOrderQty": 50,
+        "inStockQty": 100000
+        
+    },
+    {
+        "name": "Break Calliper",
+        "model": "FS-250",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/callipers.jpg",
+        "details": "A caliper is part of the disc brake system, the type most cars have in their front brakes. The brake caliper houses your car's brake pads and pistons. Its job is to slow the car's wheels by creating friction with the brake rotors.",
+        "price": 200,
+        "minOrderQty": 50,
+        "inStockQty": 100000
+        
+    },
+    {
+        "name": "Oil Filter",
+        "model": "FS-250",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/Images-for-rolls-royce-spare-parts/products/oil-filter.jpg",
+        "details": "An oil filter is typically encased in a small capsule with various components inside that are used to filter out contaminants within the oil. The filter's job is to cycle the clean oil back through the engine parts to keep the components running as smoothly as possible.",
+        "price": 50,
+        "minOrderQty": 50,
+        "inStockQty": 100000
+        
+    },
+    {
+        "name": "Air Filter",
+        "model": "FS-250",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/Images-for-rolls-royce-spare-parts/products/air-filter.jpg",
+        "details": "Research shows that filtering the air can indeed help to remove harmful particles from indoor spaces, particularly allergens, smoke, and mold. Still, air purifiers work best in conjunction with proper filtration and home cleaning techniques.",
+        "price": 45,
+        "minOrderQty": 50,
+        "inStockQty": 100000
+        
+    }
+]
