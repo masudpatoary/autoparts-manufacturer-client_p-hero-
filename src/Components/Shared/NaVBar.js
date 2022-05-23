@@ -3,7 +3,6 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { RiMenuAddFill } from 'react-icons/ri';
 
 
 
@@ -59,9 +58,7 @@ const NavBar = () => {
                 </ul>
 
             </div>
-            <div>
-                <label tabIndex="1" for="openDashboard" class="btn btn-active btn-ghost drawer-button lg:hidden"><RiMenuAddFill /></label>
-            </div>
+            
         </div>
     );
 };

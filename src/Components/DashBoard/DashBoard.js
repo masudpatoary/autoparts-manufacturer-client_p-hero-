@@ -3,16 +3,17 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
 
+import { RiMenuAddFill } from 'react-icons/ri';
+import AddParts from './Admin/AddParts/AddParts';
+
 const DashBoard = () => {
-  const [user] = useAuthState(auth);
   const dashBoardMenu =
     <>
       {/* <!-- Sidebar content here --> */}
       <li><Link to="/dashboard/profile">My Profile</Link></li>
       <li><Link to="/dashboard/orders">My Orders</Link></li>
       <li><Link to="/dashboard/review">My Reviews</Link></li>
-
-      <li><Link to="/dashboard/addnewparts">Add New Parts</Link></li>
+      <li><label for="add-parts-modal" class="">Add New Parts</label></li>
       <li><Link to="/dashboard/manageorders">Manage All Orders</Link></li>
       <li><Link to="/dashboard/manageparts">Manage All Parts</Link></li>
       <li><Link to="/dashboard/makeadmin">Make Admin</Link></li>
@@ -20,7 +21,11 @@ const DashBoard = () => {
 
   return (
     <div>
-      <h1>Dashboard</h1>
+
+      <h1 className='text-center'>Dashboard</h1>
+      <div className='mx-8'>
+        <label tabIndex="1" for="openDashboard" class="lg:hidden cursor-pointer "><RiMenuAddFill /></label>
+      </div>
       <Outlet></Outlet>
 
       <div class="drawer drawer-mobile">
@@ -42,6 +47,7 @@ const DashBoard = () => {
 
         </div>
       </div>
+      <AddParts></AddParts>
     </div>
 
   );
