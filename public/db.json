@@ -54,84 +54,161 @@
         "inStockQty": 100000
     }
 ]
+
 [
     {
-        "imgUrl":"https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
-        "numbers":158,
-        "qoute":"Countries"
+        "clientName": "Max",
+        "clientEmail": "max.max.com",
+        "partsName": "Air Filter",
+        "model": "FS-250",
+        "imgUrl": "",
+        "price": 45,
+        "orderqty": 70,
+        "paymentStutus": "Due",
+        "shippingStutus": "Shipped"
     },
     {
-        "imgUrl":"https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/project.jpg",
-        "numbers":6000,
-        "qoute":"Completed Projects"
+        "clientName": "Max",
+        "clientEmail": "max.max.com",
+        "partsName": "Air Filter",
+        "model": "FS-250",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/Images-for-rolls-royce-spare-parts/products/air-filter.jpg",
+        "price": 45,
+        "orderqty": 100,
+        "paymentStutus": "Due",
+        "shippingStutus": "Shipped"
     },
-    
     {
-        "imgUrl":"https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/happyclient.jpg",
-        "numbers":5000,
-        "qoute":"Our Partners"
+        "clientName": "Max",
+        "clientEmail": "max.max.com",
+        "partsName": "Air Filter",
+        "model": "FS-250",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/Images-for-rolls-royce-spare-parts/products/air-filter.jpg",
+        "price": 45,
+        "orderqty": 80,
+        "paymentStutus": "Due",
+        "shippingStutus": "Shipped"
     },
     {
-        "imgUrl":"https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/reviews.jpg",
+        "clientName": "Max",
+        "clientEmail": "max.max.com",
+        "partsName": "Air Filter",
+        "model": "FS-250",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/Images-for-rolls-royce-spare-parts/products/air-filter.jpg",
+        "price": 45,
+        "orderqty": 65,
+        "paymentStutus": "Due",
+        "shippingStutus": "Shipped"
+    }
+]
+
+
+
+[
+    {
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
+        "numbers": 158,
+        "qoute": "Countries"
+    },
+    {
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/project.jpg",
+        "numbers": 6000,
+        "qoute": "Completed Projects"
+    },
+    {
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/happyclient.jpg",
+        "numbers": 5000,
+        "qoute": "Our Partners"
+    },
+    {
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/reviews.jpg",
         "numbers": 1.5,
-        "qoute":"Feedbacks"
+        "qoute": "Feedbacks"
     },
 ]
+
+
+
+
+
 [
     {
-        "name":"Kaiden",
-        "email":"abc",
-        "partsname":"abc",
-        "imgUrl":"https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
-        "rating":158,
-        "review":"great help and gave very detailed information"
+        "name": "364",
+        "email": "364@email.com",
+        "userType": "admin"
     },
     {
-        "name":"Yutin",
-        "email":"abc",
-        "partsname":"abc",
-        "imgUrl":"https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
-        "rating":158,
-        "review":"He was very prompt in responding to all my questions"
+        "name": "Okla",
+        "email": "okla@email.com",
+        "userType": "user"
     },
     {
-        "name":"Ema",
-        "email":"abc",
-        "partsname":"abc",
-        "imgUrl":"https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
-        "rating":158,
-        "review":"It was certainly a great experience speaking with Marc"
+        "name": "Oka",
+        "email": "oka@email.com",
+        "userType": "user"
+    }
+]
+
+
+
+
+
+
+[
+    {
+        "name": "Kaiden",
+        "email": "abc",
+        "partsname": "abc",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
+        "rating": 158,
+        "review": "great help and gave very detailed information"
     },
     {
-        "name":"Devid",
-        "email":"abc",
-        "partsname":"abc",
-        "imgUrl":"https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
-        "rating":158,
-        "review":"This is the most recommended consultancy agency around the town"
+        "name": "Yutin",
+        "email": "abc",
+        "partsname": "abc",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
+        "rating": 158,
+        "review": "He was very prompt in responding to all my questions"
     },
     {
-        "name":"Yutin",
-        "email":"abc",
-        "partsname":"abc",
-        "imgUrl":"https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
-        "rating":158,
-        "review":"He was very prompt in responding to all my questions"
+        "name": "Ema",
+        "email": "abc",
+        "partsname": "abc",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
+        "rating": 158,
+        "review": "It was certainly a great experience speaking with Marc"
     },
     {
-        "name":"Ema",
-        "email":"abc",
-        "partsname":"abc",
-        "imgUrl":"https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
-        "rating":158,
-        "review":"It was certainly a great experience speaking with Marc"
+        "name": "Devid",
+        "email": "abc",
+        "partsname": "abc",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
+        "rating": 158,
+        "review": "This is the most recommended consultancy agency around the town"
     },
     {
-        "name":"Devid",
-        "email":"abc",
-        "partsname":"abc",
-        "imgUrl":"https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
-        "rating":158,
-        "review":"This is the most recommended consultancy agency around the town"
+        "name": "Yutin",
+        "email": "abc",
+        "partsname": "abc",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
+        "rating": 158,
+        "review": "He was very prompt in responding to all my questions"
+    },
+    {
+        "name": "Ema",
+        "email": "abc",
+        "partsname": "abc",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
+        "rating": 158,
+        "review": "It was certainly a great experience speaking with Marc"
+    },
+    {
+        "name": "Devid",
+        "email": "abc",
+        "partsname": "abc",
+        "imgUrl": "https://raw.githubusercontent.com/masudpatoary/lucky-1/main-1/assignment-12-manufacturer/pin.jpg",
+        "rating": 158,
+        "review": "This is the most recommended consultancy agency around the town"
     }
 ]

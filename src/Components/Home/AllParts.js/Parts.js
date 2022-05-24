@@ -6,19 +6,19 @@ const Parts = (props) => {
     const { id, model, img, name, details, price, minOrderQty, inStockQty } = props
 
 
-    const showInventoryDetail = () => {
+    const PartsDetail = () => {
         navigate(`/autoparts/${id}`)
     }
     return (
-        <div class="justify-between items-end sm:w-full md:w-2/5  border m-2 p-5">
+        <div  className="justify-between items-end sm:w-full md:w-2/5  border m-2 p-5">
             <div className='flex justify-center'>
                 <div>
                     <img src={img} alt="Movie" className='w-96	' />
                 </div>
             </div>
 
-            <div class=" my-3   text-left text-base">
-                <h2 class="card-title">{name}</h2>
+            <div  className=" my-3   text-left text-base">
+                <h2  className="card-title">{name}</h2>
                 <p>Model: {model}</p>
                 <p>Price Per Unit: ${price}</p>
                 <p>Avaiable in stock{inStockQty}</p>
@@ -27,7 +27,7 @@ const Parts = (props) => {
                 <p>{details}</p>
             </div>
             <div className='w-full mb-0 flex justify-center items-end'>
-                <button onClick={showInventoryDetail} class="btn btn-primary w-40">Buy Now</button>
+                <button onClick={PartsDetail}  className="btn btn-primary w-40">Buy Now</button>
             </div>
         </div>
     );

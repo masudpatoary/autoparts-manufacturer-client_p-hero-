@@ -55,17 +55,17 @@ const SignUp = () => {
     }
     
     return (
-        <div class="hero min-h-screen bg-base-200">
-            <div class="card-body card w-full max-w-sm shadow-2xl bg-base-100">
+        <div  className="hero min-h-screen bg-base-200">
+            <div  className="card-body card w-full max-w-sm shadow-2xl bg-base-100">
                 <p className='font-bold'>Please fill the form to Sign Up</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input type="name" {...register("name")} class="input input-bordered w-full mb-3" placeholder='Your Name'/>
-                    <input type="email" {...register("email")} class="input input-bordered w-full" />
-                    <input type="password" {...register("password")} class="input input-bordered w-full my-3" />
-                    <input type="submit" value="Sign Up" class=" btn btn-primary input input-bordered w-full" />
+                    <input type="name" {...register("name")}  className="input input-bordered w-full mb-3" placeholder='Your Name'/>
+                    <input type="email" {...register("email")}  className="input input-bordered w-full" />
+                    <input type="password" {...register("password")}  className="input input-bordered w-full my-3" />
+                    <input type="submit" value="Sign Up"  className=" btn btn-primary input input-bordered w-full" />
                 </form>
-                <div class="divider">OR</div>
-                <button class="btn btn-outline text-center items-center  btn-sm">
+                <div  className="divider">OR</div>
+                <button  className="btn btn-outline text-center items-center  btn-sm">
                 <Link to='/signin'>Sign In</Link>
                 </button>
             </div>

@@ -38,23 +38,23 @@ const SignIn = () => {
         navigate(from, { replace: true });
     }
     return (
-        <div class="hero min-h-screen bg-base-200">
-            <div class="card-body card w-full max-w-sm shadow-2xl bg-base-100">
+        <div  className="hero min-h-screen bg-base-200">
+            <div  className="card-body card w-full max-w-sm shadow-2xl bg-base-100">
                 <p className='font-bold'>Please fill the form to Sign In</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input type="email" {...register("email")} class="input input-bordered w-full" />
-                    <input type="password" {...register("password")} class="input input-bordered w-full my-3" />
-                    <input type="submit" value="Sign In" class=" btn btn-primary input input-bordered w-full" />
+                    <input type="email" {...register("email")}  className="input input-bordered w-full" />
+                    <input type="password" {...register("password")}  className="input input-bordered w-full my-3" />
+                    <input type="submit" value="Sign In"  className=" btn btn-primary input input-bordered w-full" />
                 </form>
                 <div>
-                    <div class="divider">OR</div>
+                    <div  className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        class="btn btn-outline text-center items-center w-full flex justify-between items-center" >
+                         className="btn btn-outline text-center items-center w-full flex justify-between items-center" >
                         <FcGoogle className="text-2xl"></FcGoogle>Sign in with google
                     </button>
-                    <div class="divider">OR</div>
-                    <button class="btn btn-outline btn-sm text-center items-center w-full">
+                    <div  className="divider">OR</div>
+                    <button  className="btn btn-outline btn-sm text-center items-center w-full">
                         <Link to='/signup'>Sign Up with email</Link>
                     </button>
                 </div>

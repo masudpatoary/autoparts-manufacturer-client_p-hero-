@@ -7,9 +7,9 @@ import auth from '../../firebase.init';
 const Footer = () => {
     const [user] = useAuthState(auth);
     return (
-        <footer class="footer mt-auto px-10 py-5 bg-base-300 justify-center items-center">
+        <footer  className="footer mt-auto px-10 py-5 bg-base-300 justify-center items-center">
             <div>
-                <ul class="flex w-64 font-bold">
+                <ul  className="flex w-64 font-bold">
                     <li className='px-2'><Link to='/home'>Home</Link></li>
                     <li className='px-2'><Link to='/about'>About</Link></li>
                     <li className='px-2'><Link to='/blog'>Blog</Link></li>
@@ -18,7 +18,7 @@ const Footer = () => {
                     }
                 </ul>
             </div>
-            <div class="grid grid-flow-col gap-4 text-xl  mx-auto">
+            <div  className="grid grid-flow-col gap-4 text-xl  mx-auto">
                 <FaFacebook />
                 <FaTwitter />
                 <FaYoutube />
