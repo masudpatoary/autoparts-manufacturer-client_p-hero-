@@ -3,15 +3,15 @@ import React from 'react';
 const Order = ({ order, index }) => {
     const { clientName,clientEmail, partsName, model, imgUrl, price, orderqty, paymentStutus, shippingStutus } = order
     return (
-        <tr className=' text-center'>
+        <tr className=' text-center '>
             <th>{index + 1}</th>
-            <td>
+            <td className='md:hidden'>
                 <div  className="w-16">
                     <img src={imgUrl} alt={partsName} />
                 </div>
             </td>
             <td>{partsName}</td>
-            <td>{model}</td>
+            <td className='md:hidden'>{model}</td>
             <td>{orderqty}</td>
             <td>{clientName}</td>
             <td>{clientEmail}</td>

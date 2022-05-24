@@ -1,8 +1,11 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 const Parts = (props) => {
     const navigate = useNavigate()
+
     const { id, model, img, name, details, price, minOrderQty, inStockQty } = props
 
 
@@ -26,7 +29,7 @@ const Parts = (props) => {
                 <p className='font-bold mt-2'>Description</p>
                 <p>{details}</p>
             </div>
-            <div className='w-full mb-0 flex justify-center items-end'>
+            <div className='w-full my-auto flex justify-center items-end'>
                 <button onClick={PartsDetail}  className="btn btn-primary w-40">Buy Now</button>
             </div>
         </div>

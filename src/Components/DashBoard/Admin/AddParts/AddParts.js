@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 
 const AddParts = () => {
-    const styleClass ='m-1 px-3 border py-2 px-4 w-full'
+    const styleClass ='m-1 border py-2 px-4 w-full'
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
@@ -13,6 +13,7 @@ const AddParts = () => {
             <input type="checkbox" id="add-parts-modal" class="modal-toggle" />
             <div class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
+                    <h1>Fill the form and <span className='font-bold'>"SUBMIT"</span> < br/>to add a new <span className='font-bold'>Parts</span> in stock</h1>
                 <label for="add-parts-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
 
                     <form className='mt-5' onSubmit={handleSubmit(onSubmit)}>
