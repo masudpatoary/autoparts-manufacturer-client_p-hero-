@@ -18,7 +18,7 @@ const Admin = ({ user, index }) => {
             <td>{userType}</td>
             <td>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <select {...register("userType")} class="select select-bordered select-sm w-20 max-w-xs">
+                    <select {...register("userType")} className="select select-bordered select-sm w-20 max-w-xs">
                         <option >User</option>
                         <option >Admin</option>
                     </select><br/>

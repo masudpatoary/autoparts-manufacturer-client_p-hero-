@@ -4,6 +4,7 @@ import usePartsDetail from '../../../hooks/usePartsDetail';
 import { useForm } from "react-hook-form";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import { toast } from 'react-toastify';
 
 
 
@@ -13,12 +14,27 @@ const PartsDetail = () => {
     const [detail] = usePartsDetail(id)
     const { model, imgUrl, name, details, price, minOrderQty, inStockQty } = detail
     const styleClass = 'm-1 border py-2 px-4 w-full'
-    const { register, handleSubmit, getValues,setValue, reset } = useForm();
+    const { register, handleSubmit, getValues, setValue, reset } = useForm();
 
     //    const orderQtyValue = minOrderQty <= getValues('orderqty') && inStockQty>=getValues('orderqty')
 
     const onSubmit = async data => {
-        console.log(await getValues('orderqty'), data);
+        const partsName = name
+        const formData = { ...data, price, partsName }
+        console.log(await formData);
+        await fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log('New order received', result);
+
+            })
+        toast('New order Successfully POlaced')
         reset()
     }
     const orderQty = getValues('orderqty')
@@ -55,9 +71,14 @@ const PartsDetail = () => {
                                 <input className={styleClass} {...register("clientName")} placeholder='Your Name' reset required value={user?.displayName || ''} /><br />
                                 <input className={styleClass} {...register("clientEmail")} placeholder='Your Email ' reset required value={user?.email || ''} /><br />
                                 <input className={styleClass} type="number" {...register("phoneNumber")} placeholder='Phone Number' required /><br />
-                                <input className={styleClass} type="number" {...register("orderqty", { max: detail?.inStockQty }, { min: detail?.minOrderQty })}  onBlur={() => setValue("totalprice", totalOrderedItemPrice)}  placeholder='Order Quantity' required /><br />
+                                <input className={styleClass} type="number" {...register("orderqty", { max: detail?.inStockQty }, { min: detail?.minOrderQty })} onBlur={() => setValue("totalprice", totalOrderedItemPrice)} placeholder='Order Quantity' required /><br />
                                 <textarea className='m-1 border py-2 px-4 w-full h-24 resize-none'  {...register("address")} placeholder='Give Your Address' required /><br />
-                                <label>Total Cost: $</label><input {...register("totalprice")} className='m-1 border py-2 px-4' type="number"/><br />
+                                <label>Total Cost: $</label><input {...register("totalprice")} className='m-1 border py-2 px-4' type="number" /><br />
+                                <label>Payment Stutus: </label>
+                                <select className="select select-bordered select-sm w-48 m-2 max-w-xs" {...register("paymentStutus")}>
+                                    <option >Due</option>
+                                    <option >Pre Payment</option>
+                                </select><br />
                                 <input type="submit" className='btn btn-sm' value='Order Now' />
 
                             </form>
