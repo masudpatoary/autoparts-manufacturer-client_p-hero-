@@ -16,12 +16,12 @@ const PartsDetail = () => {
     const styleClass = 'm-1 border py-2 px-4 w-full'
     const { register, handleSubmit, getValues, setValue, reset } = useForm();
 
-    //    const orderQtyValue = minOrderQty <= getValues('orderqty') && inStockQty>=getValues('orderqty')
+    // add new order to Database
 
     const onSubmit = async data => {
         const partsName = name
         const formData = { ...data, price, partsName }
-        console.log(await formData);
+        // console.log(await formData);
         await fetch('http://localhost:5000/order', {
             method: 'POST',
             headers: {
@@ -34,12 +34,34 @@ const PartsDetail = () => {
                 console.log('New order received', result);
 
             })
-        toast('New order Successfully POlaced')
+        toast('New order Successfully Placed')
+        handleUpdateQty()
         reset()
     }
-    const orderQty = getValues('orderqty')
+    const orderQty = (getValues('orderqty'))
     const totalOrderedItemPrice = (orderQty * detail?.price)
 
+    // update product quantity after order
+    const handleUpdateQty = async () => {
+        let newStockQty =await inStockQty - orderQty
+        console.log(inStockQty,newStockQty, 'inputQty')
+        const url = `http://localhost:5000/autoparts/${id}`;
+        await fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ inStockQty: newStockQty })
+        })
+            .then(res => res.json())
+            .then(data => {
+                // console.log('success', data)
+            })
+
+    }
+
+
+   
 
     return (
         <div className='md:w-4/5 mx-auto mb-5'>
@@ -58,7 +80,8 @@ const PartsDetail = () => {
                         <div>
                             <p className="py-2">Model: {model}</p>
                             <p className="">Price: ${price}</p>
-                            <p className="py-2">Minimum order quantity{minOrderQty}</p>
+                            <p className="py-2">Minimum order quantity: {minOrderQty}</p>
+                            <p className="py-2">Minimum order quantity: {inStockQty}</p>
                             <p className="font-bold">Description</p>
                             <p className="">{details}</p>
                         </div>

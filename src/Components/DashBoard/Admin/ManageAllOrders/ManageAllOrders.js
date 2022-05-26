@@ -20,6 +20,7 @@ const ManageAllOrders = () => {
                             <th>Email</th>
                             <th>Price</th>
                             <th>Payment Stutus</th>
+                            <th>Stutus</th>
                             <th>Shipping Stutus</th>
                             <th></th>
                         </tr>

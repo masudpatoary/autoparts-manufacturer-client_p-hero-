@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 
-const  usePartsDetail =  (id) => {
+const usePartsDetail = (id) => {
     const [detail, setDetail] = useState({});
 
-    useEffect( () => {
+    useEffect(() => {
         const url = `http://localhost:5000/autoparts/${id}`;
          fetch(url)
             .then(res => res.json())

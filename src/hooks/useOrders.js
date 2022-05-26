@@ -7,9 +7,9 @@ const useOrders = () => {
         const url ="http://localhost:5000/order"
         fetch(url)
         .then(res=>res.json())
-        .then(data=>setOrders(data))
+        .then(async data=>setOrders( await data))
       
-    }, [])
+    }, [orders])
     
 
     return [orders, setOrders];

@@ -7,7 +7,7 @@ const useUsers = () => {
         const url ="http://localhost:5000/user"
         fetch(url)
         .then(res=>res.json())
-        .then(data=>setUsers(data))
+        .then(async data=>setUsers(await data))
       
     }, [users])
     

@@ -1,11 +1,25 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 const AddParts = () => {
     const styleClass ='m-1 border py-2 px-4 w-full'
     const { register, handleSubmit, reset } = useForm();
-    const onSubmit = data => {
+    const onSubmit = async data => {
         console.log(data);
+        await fetch('http://localhost:5000/autoparts', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log('New parts added to database', result);
+
+            })
+        toast('New order Successfully POlaced')
         reset()
     }
     return (

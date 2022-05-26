@@ -12,6 +12,9 @@ import ManageAllOrders from './Components/DashBoard/Admin/ManageAllOrders/Manage
 import MakeAdmin from './Components/DashBoard/Admin/MakeAdmin';
 import PartsDetail from './Components/Home/AllParts.js/PartsDetail';
 import Profile from './Components/DashBoard/User/Profile';
+import { ToastContainer } from 'react-toastify';
+import PageNotFound from './Components/Shared/PageNotFound';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -34,8 +37,9 @@ function App() {
           </Route>
         </Route>
 
-        <Route path='*' element={<div>Not Found</div>}></Route>
+        <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
+      <ToastContainer />
       <Footer></Footer>
     </div>
   );

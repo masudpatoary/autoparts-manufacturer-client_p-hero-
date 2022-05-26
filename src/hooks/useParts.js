@@ -7,7 +7,7 @@ const useParts = () => {
         const url ="http://localhost:5000/autoparts"
         fetch(url)
         .then(res=>res.json())
-        .then(data=>setAutoparts(data))
+        .then(async data=>await setAutoparts(data))
       
     }, [autoparts])
     

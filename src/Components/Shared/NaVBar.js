@@ -3,7 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
-
+import { HiMenuAlt1 } from 'react-icons/hi';
 
 
 
@@ -14,25 +14,29 @@ const NavBar = () => {
     const logout = () => {
         signOut(auth);
     };
+    const navMenuItems = <>
+        <li><Link to='/home'>Home</Link></li>
+        <li><Link to='/about'>About</Link></li>
+        <li><Link to='/blog'>Blog</Link></li>
+        {user ? <>
+            <li><Link to='/dashboard'>Dash Board</Link></li>
+            <li onClick={logout}> <Link to=''>Sign Out</Link></li>
+        </> :
+            <>
+                <li><Link to='/signin'>Sign In</Link></li>
+                <li><Link to='/signup'>Sign Up</Link></li>
+            </>}
+    </>
+
     return (
-        <div  className="navbar bg-base-100 flex justify-between">
-            <div  className="navbar-start">
-                <div  className="dropdown">
-                    <label tabindex="0"  className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg"  className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <div className="navbar bg-base-100 flex justify-between">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabindex="0" className="btn btn-ghost text-2xl lg:hidden">
+                        <HiMenuAlt1 />
                     </label>
-                    <ul tabindex="0"  className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><Link to='/home'>Home</Link></li>
-                    <li><Link to='/about'>About</Link></li>
-                    <li><Link to='/blog'>Blog</Link></li>
-                    {user ? <>
-                        <li><Link to='/dashboard'>Dash Board</Link></li>
-                        <li onClick={logout}> <Link to=''>Sign Out</Link></li>
-                    </> :
-                        <>
-                            <li><Link to='/signin'>Sign In</Link></li>
-                            <li><Link to='/signup'>Sign Up</Link></li>
-                        </>}
+                    <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        {navMenuItems}
                     </ul>
                 </div>
 
@@ -41,23 +45,13 @@ const NavBar = () => {
                 </div>
             </div>
 
-            <div  className="navbar-center hidden lg:flex">
-                <ul  className="menu menu-horizontal p-0">
-                    <li><Link to='/home'>Home</Link></li>
-                    <li><Link to='/about'>About</Link></li>
-                    <li><Link to='/blog'>Blog</Link></li>
-                    {user ? <>
-                        <li><Link to='/dashboard'>Dash Board</Link></li>
-                        <li onClick={logout}> <Link to=''>Sign Out</Link></li>
-                    </> :
-                        <>
-                            <li><Link to='/signin'>Sign In</Link></li>
-                            <li><Link to='/signup'>Sign Up</Link></li>
-                        </>}
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal p-0">
+                   {navMenuItems}
                 </ul>
 
             </div>
-            
+
         </div>
     );
 };
