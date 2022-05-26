@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import useUser from '../../../hooks/useUser';
+import { toast } from 'react-toastify';
 
 
 const AddReviews = () => {
@@ -26,7 +27,7 @@ const AddReviews = () => {
                 console.log('Review Successfully Provided', result);
 
             })
-        // Toast('You successfully reviewed')
+        toast('You successfully reviewed')
         reset()
     }
     return (
@@ -34,7 +35,7 @@ const AddReviews = () => {
             <input type="checkbox" id="add-review-modal" class="modal-toggle" />
             <div class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
-                    <h1>Fill the form and <span className='font-bold'>"SUBMIT"</span> < br/>to add a new <span className='font-bold'>Parts</span> in stock</h1>
+                    <h1 className='text-center font-bold'>Send Us your feedback</h1>
                 <label for="add-review-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
 
                     <form className='mt-5' onSubmit={handleSubmit(onSubmit)}>
