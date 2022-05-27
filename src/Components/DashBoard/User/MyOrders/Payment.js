@@ -10,8 +10,8 @@ import { useQuery } from 'react-query';
 const Payment = () => {
     const { id } = useParams();
     const stripePromise = loadStripe('pk_test_51L3uocC4Yx0FgrUsH3ykL1ra9pA4u4qVNIGogbqYDOSn6od4uuEp5T5wivY9LhvMkBY3G7vaKdLLKZxNnOPuj48e00Vmt30eFr');
-   
-//    let stutus= "Pre Payment"
+
+    //    let stutus= "Pre Payment"
     // const url = `http://localhost:5000/order/${id}`;
     const url = `http://localhost:5000/order/${id}`;
 
@@ -22,7 +22,7 @@ const Payment = () => {
     if (isLoading) {
         return <Loading></Loading>
     }
-let payment = {paymentStutus: "Pre Paid"}
+    let payment = { paymentStutus: "Paid" }
     const handlePaymentStutus = async (event) => {
         console.log(id)
         console.log(payment)
@@ -32,15 +32,13 @@ let payment = {paymentStutus: "Pre Paid"}
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify({payment: "Pre Paid"})
+            body: JSON.stringify({ payment: "Paid" })
         })
             .then(res => res.json())
             .then(result => {
                 console.log('New parts added to database', result);
 
             })
-
-
     }
 
 
@@ -75,7 +73,7 @@ let payment = {paymentStutus: "Pre Paid"}
                                 />
                                 <button
                                     onClick={handlePaymentStutus}
-                                    disabled={data.paymentStutus === "Pre Paid"}
+                                    disabled={data.paymentStutus === "Paid"}
                                     className='btn btn-success btn-sm mt-4' type="submit" >
                                     Pay
                                 </button>

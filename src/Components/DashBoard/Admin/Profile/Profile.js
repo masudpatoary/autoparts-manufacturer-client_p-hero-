@@ -2,11 +2,10 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
 import useSingleAdmin from '../../../../hooks/useSingleAdmin';
-import useUsers from '../../../../hooks/useUsers';
 import ProfileUpdate from './ProfileUpdate';
 const Profile = () => {
     const [user] = useAuthState(auth);
-    const [SingleAdmin, setSingleAdmin ] =useSingleAdmin()
+    const [SingleAdmin] = useSingleAdmin()
     return (
         <div class="card w-96 drop-shadow-lg mx-auto my-5">
             <div class="card-body bg-base-200">
@@ -24,13 +23,14 @@ const Profile = () => {
                 <p>Name: {SingleAdmin?.name || user.displayName}</p>
                 <p>Primary Email: {SingleAdmin?.email || user.email}</p>
                 <p>Secondery Email: {SingleAdmin?.seconderyEmail}</p>
-                
-                    <button className='btn btn-outline btn-primary btn-sm mt-16 w-32 text-sm'
-                        onClick={async () => console.log('await user')}>
-                        <label for="profileupdate">Edit Profile</label></button>
-                
+
+                <button className='btn btn-outline btn-primary btn-sm mt-16 w-32 text-sm'
+                    onClick={async () => console.log('await user')}>
+                    <label for="profileupdate">Edit Profile</label>
+                </button>
+
             </div>
-            
+
         </div>
     );
 };

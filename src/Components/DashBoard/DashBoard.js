@@ -8,6 +8,7 @@ import AddParts from './Admin/AddParts/AddParts';
 import useAdmin from '../../hooks/useAdmin';
 import ProfileUpdate from './Admin/Profile/ProfileUpdate';
 import AddReviews from './User/AddReviews';
+import OrderCancelModal from './User/MyOrders/OrderCancelModal';
 
 const DashBoard = () => {
   const [user] = useAuthState(auth);
@@ -59,8 +60,9 @@ const DashBoard = () => {
           </ul>
         </div>
       </div>
-      <AddReviews></AddReviews>
-      <AddParts></AddParts>
+      <OrderCancelModal />
+      <AddReviews />
+      <AddParts />
       <ProfileUpdate />
     </div>
 
