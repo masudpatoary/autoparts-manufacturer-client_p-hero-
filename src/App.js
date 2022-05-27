@@ -11,7 +11,7 @@ import RequireAuth from './Components/Authentication/RequirAuth';
 import ManageAllOrders from './Components/DashBoard/Admin/ManageAllOrders/ManageAllOrders';
 import MakeAdmin from './Components/DashBoard/Admin/MakeAdmin';
 import PartsDetail from './Components/Home/AllParts.js/PartsDetail';
-import Profile from './Components/DashBoard/User/Profile';
+import Profile from './Components/DashBoard/Admin/Profile/Profile';
 import { ToastContainer } from 'react-toastify';
 import PageNotFound from './Components/Shared/PageNotFound';
 import 'react-toastify/dist/ReactToastify.css';

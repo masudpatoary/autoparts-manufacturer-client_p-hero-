@@ -1,7 +1,8 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import auth from '../../../firebase.init';
+import { toast } from 'react-toastify';
+import auth from '../../../../firebase.init';
 
 const ProfileUpdate = () => {
     const [user] = useAuthState(auth);
@@ -16,7 +17,7 @@ const ProfileUpdate = () => {
     const onSubmit = async data => {
 
 
-        await fetch(`http://localhost:5000/user/${email}`, {
+        await fetch(`http://localhost:5000/admin/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -28,7 +29,7 @@ const ProfileUpdate = () => {
                 console.log('user updated', user?.email, result);
 
             })
-        // toast('New order Successfully POlaced')
+        toast('Your Profile Successfully Updated')
         // reset()
     }
     return (

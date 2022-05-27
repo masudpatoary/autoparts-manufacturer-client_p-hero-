@@ -6,7 +6,7 @@ import auth from '../../firebase.init';
 import { CgMenuGridO } from 'react-icons/cg';
 import AddParts from './Admin/AddParts/AddParts';
 import useAdmin from '../../hooks/useAdmin';
-import ProfileUpdate from './User/ProfileUpdate';
+import ProfileUpdate from './Admin/Profile/ProfileUpdate';
 import AddReviews from './User/AddReviews';
 
 const DashBoard = () => {
@@ -21,7 +21,7 @@ const DashBoard = () => {
       {adminexist ?
         <>
 
-          
+          <li><Link to="/dashboard/myprofile">My Profile</Link></li>
           <li><label for="add-review-modal">Add New Parts</label></li>
           <li><Link to="/dashboard/manageorders">Manage All Orders</Link></li>
           <li><Link to="/dashboard/manageparts">Manage All Parts</Link></li>
@@ -29,7 +29,6 @@ const DashBoard = () => {
         </>
         :
         <>
-          <li><Link to="/dashboard/myprofile">My Profile</Link></li>
           <li><Link to="/dashboard/myorders">My Orders</Link></li>
           <li>My Reviews</li>
           <li><Link to="/dashboard/myreview">My Reviews</Link></li>

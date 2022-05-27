@@ -2,13 +2,13 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import auth from '../../../../firebase.init';
-import useUser from '../../../../hooks/useUser';
+import useSingleAdmin from '../../../../hooks/useUser';
 import Loading from '../../../Shared/Loading';
 import Myreview from './MyReview';
 
 const MyReviews = () => {
     const [user] = useAuthState(auth);
-    const [users] = useUser()
+    const [users] = useSingleAdmin()
 
     const userEmail = user?.email
     const userEmailFromDB = users?.email

@@ -82,8 +82,15 @@ const PartsDetail = () => {
                         <div>
                             <p className="py-2">Model: {model}</p>
                             <p className="">Price: ${price}</p>
-                            <p className="py-2">Minimum order quantity: {minOrderQty}</p>
-                            <p className="py-2">Minimum order quantity: {inStockQty}</p>
+                            
+                            
+                            {minOrderQty>inStockQty? 
+                            
+                             <p className='font-bold text-red-700'>Out of Stock</p>:
+                             <><p className="py-2">Minimum order quantity: {minOrderQty}</p>
+                            <p className="py-2">Maximum order quantity: {inStockQty}</p></>
+
+                            }
                             <p className="font-bold">Description</p>
                             <p className="">{details}</p>
                         </div>
@@ -98,13 +105,13 @@ const PartsDetail = () => {
                                 <input className={styleClass} type="number" {...register("phoneNumber")} placeholder='Phone Number' required /><br />
                                 <input className={styleClass} type="number" {...register("orderqty", { max: detail?.inStockQty }, { min: detail?.minOrderQty })} onBlur={() => setValue("totalprice", totalOrderedItemPrice)} placeholder='Order Quantity' required /><br />
                                 <textarea className='m-1 border py-2 px-4 w-full h-24 resize-none'  {...register("address")} placeholder='Give Your Address' required /><br />
-                                <label>Total Cost: $</label><input {...register("totalprice")} className='m-1 border py-2 px-4' type="number" /><br />
+                                {/* <label>Total Cost: $</label><input {...register("totalprice")} className='m-1 border py-2 px-4' type="number" /><br />
                                 <label>Payment Stutus: </label>
                                 <select className="select select-bordered select-sm w-48 m-2 max-w-xs" {...register("paymentStutus")}>
                                     <option >Due</option>
                                     <option >Pre Payment</option>
-                                </select><br />
-                                <input type="submit" className='btn btn-sm' value='Order Now' disabled={disable}/>
+                                </select><br /> */}
+                                <input type="submit" className='btn btn-sm' value='Order Now' disabled={disable || minOrderQty>inStockQty}/>
 
                             </form>
                         </div>

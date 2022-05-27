@@ -2,13 +2,13 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import useUser from '../../../hooks/useUser';
+import useSingleAdmin from '../../../hooks/useUser';
 import { toast } from 'react-toastify';
 
 
 const AddReviews = () => {
     const [user] = useAuthState(auth);
-    const [dbUser] = useUser()
+    const [dbUser] = useSingleAdmin()
     const styleClass ='m-1 border py-2 px-4 w-full'
     const { register, handleSubmit, reset } = useForm();
 
