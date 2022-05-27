@@ -5,13 +5,14 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
+import { toast } from 'react-toastify';
 
 
 const SignIn = () => {
     const location = useLocation();
     const navigate = useNavigate();
     let from = location.state?.from?.pathname || "/";
-    const { register, handleSubmit } = useForm();
+    const { register, getValues, handleSubmit } = useForm();
     const [
         signInWithEmailAndPassword,
         user1,
@@ -21,40 +22,40 @@ const SignIn = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
+
     }
+
+
 
     if (loading1 || googleLoading) {
         return <Loading></Loading>
     }
 
     if (error1 || googleError) {
-        return (
-            <div>
-                <p>Error: {error1.message ||googleError.message}</p>
-            </div>
-        );
+toast(`email and password not matched`)
+        // <p>Error: {error1.message || googleError.message}</p>
     }
     if (user1 || googleUser) {
         navigate(from, { replace: true });
     }
     return (
-        <div  className="hero min-h-screen bg-base-200">
-            <div  className="card-body card w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="hero min-h-screen bg-base-200">
+            <div className="card-body card w-full max-w-sm shadow-2xl bg-base-100">
                 <p className='font-bold'>Please fill the form to Sign In</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input type="email" {...register("email")}  className="input input-bordered w-full" />
-                    <input type="password" {...register("password")}  className="input input-bordered w-full my-3" />
-                    <input type="submit" value="Sign In"  className=" btn btn-primary input input-bordered w-full" />
+                    <input type="email" {...register("email")} className="input input-bordered w-full" />
+                    <input type="password" {...register("password")} className="input input-bordered w-full my-3" />
+                    <input type="submit" value="Sign In" className=" btn btn-primary input input-bordered w-full" />
                 </form>
                 <div>
-                    <div  className="divider">OR</div>
+                    <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                         className="btn btn-outline text-center items-center w-full flex justify-between items-center" >
+                        className="btn btn-outline text-center items-center w-full flex justify-between items-center" >
                         <FcGoogle className="text-2xl"></FcGoogle>Sign in with google
                     </button>
-                    <div  className="divider">OR</div>
-                    <button  className="btn btn-outline btn-sm text-center items-center w-full">
+                    <div className="divider">OR</div>
+                    <button className="btn btn-outline btn-sm text-center items-center w-full">
                         <Link to='/signup'>Sign Up with email</Link>
                     </button>
                 </div>

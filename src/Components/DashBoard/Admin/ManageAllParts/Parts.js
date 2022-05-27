@@ -27,7 +27,7 @@ const Parts = ({ parts, index }) => {
     return (
         <tr className=' text-center'>
             <th>{index + 1}</th>
-            <td>
+            <td className='md:hidden'>
                 <div  className="w-16">
                     <img src={imgUrl} alt={name} />
                 </div>

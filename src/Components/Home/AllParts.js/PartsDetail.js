@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 
 const PartsDetail = () => {
     const [user] = useAuthState(auth);
+    const [disable, setDisable] =useState(false)
     const { id } = useParams()
     const [detail] = usePartsDetail(id)
     const { model, imgUrl, name, details, price, minOrderQty, inStockQty } = detail
@@ -36,6 +37,7 @@ const PartsDetail = () => {
             })
         toast('New order Successfully Placed')
         handleUpdateQty()
+        setDisable(true)
         reset()
     }
     const orderQty = (getValues('orderqty'))
@@ -102,7 +104,7 @@ const PartsDetail = () => {
                                     <option >Due</option>
                                     <option >Pre Payment</option>
                                 </select><br />
-                                <input type="submit" className='btn btn-sm' value='Order Now' />
+                                <input type="submit" className='btn btn-sm' value='Order Now' disabled={disable}/>
 
                             </form>
                         </div>

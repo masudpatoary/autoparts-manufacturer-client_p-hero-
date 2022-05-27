@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 const Order = ({ order, index }) => {
@@ -7,10 +7,7 @@ const Order = ({ order, index }) => {
 
 
     const { register, getValues, handleSubmit } = useForm();
-    const shipStutus = getValues('shippingStatus')
     const onSubmit = async data => {
-
-        console.log(shipStutus, data, _id)
         await fetch(`http://localhost:5000/order/${_id}`, {
             method: 'PUT',
             headers: {
@@ -49,7 +46,7 @@ const Order = ({ order, index }) => {
                         <option >Shipped</option>
                         <option >Delivered</option>
                     </select><br />
-                    <input type="submit" value='Confirm' className='btn btn-xs btn-warning mt-2' />
+                    <input type="submit" value='Confirm' disabled={shippingStutus === 'Delivered'} className='btn btn-xs btn-warning mt-2' />
                 </form>
             </td>
         </tr>

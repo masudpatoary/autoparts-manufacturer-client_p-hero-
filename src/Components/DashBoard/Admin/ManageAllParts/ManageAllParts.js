@@ -7,12 +7,12 @@ const ManageAllParts = () => {
     return (
         <div>
             <h1 className='text-center text-xl font-bold my-2'>Currently Available Parts</h1>
-            <div className='w-100 flex flex-wrap p-md-5 p-sm-2 justify-center '>
-                <table  className="table w-full">
+            <div className='w-100 flex flex-wrap p-md-5 p-sm-2 justify-center overflow-x-scroll '>
+                <table  className="table w-full overflow-x-scroll">
                     <thead>
                         <tr className=' text-center'>
                             <th></th>
-                            <th>Image</th>
+                            <th className='md:hidden'>Image</th>
                             <th>Parts Name</th>
                             <th>Parts Model</th>
                             <th>Min. Order QTY</th>

@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 const Order = (props) => {
     const {id, model, partsName ,price ,orderqty, shippingStutus,address ,totalprice,phoneNumber, clientEmail, clientName, paymentStutus} = props
+    const orderid = props?.id
     const cancelOrder =async () => {
         
-        const orderid = props?.id
+        
         console.log(await orderid)
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
@@ -41,7 +43,8 @@ const Order = (props) => {
                 <p>Phone Number: {phoneNumber}</p>
                 <p>Receipient Address</p>
                 <p>Receipient: {address}</p>
-                <button onClick={()=>cancelOrder()} className='btn btn-sm w-32'>Cancel order</button>
+                <button disabled={paymentStutus === "Pre Paid"} className='btn btn-sm w-32'><Link to={`/dashboard/payment/${orderid}`}>Pay Now</Link></button>
+                <button onClick={()=>cancelOrder()} disabled={paymentStutus === 'Pre Payment'} className='btn btn-sm w-32'>Cancel order</button>
             </div>
         </div>
     );

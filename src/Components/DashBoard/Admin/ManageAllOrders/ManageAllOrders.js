@@ -8,13 +8,13 @@ const ManageAllOrders = () => {
         <div>
             <h1 className='text-center text-xl font-bold my-2'>Currently Available Parts</h1>
             <div className='w-100 flex flex-wrap p-md-5 p-sm-2 justify-center '>
-                <table  className="table w-full overflow-x-auto">
+                <table  className="table w-full text-sm">
                     <thead>
                         <tr className=' text-center'>
                             <th></th>
-                            <th className='sm:hidden'>Image</th>
+                            <th className='md:hidden'>Image</th>
                             <th>Parts Name</th>
-                            <th className='sm:hidden'>Parts Model</th>
+                            <th className='md:hidden'>Parts Model</th>
                             <th>Order QTY</th>
                             <th>Client</th>
                             <th>Email</th>
@@ -25,7 +25,7 @@ const ManageAllOrders = () => {
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='w-full '>
                         {
                             orders.map((order, index) => <Order
                                 key={order._id}

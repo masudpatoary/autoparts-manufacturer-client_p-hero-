@@ -16,6 +16,8 @@ import { ToastContainer } from 'react-toastify';
 import PageNotFound from './Components/Shared/PageNotFound';
 import 'react-toastify/dist/ReactToastify.css';
 import MyOrders from './Components/DashBoard/User/MyOrders/MyOrders';
+import MyReviews from './Components/DashBoard/User/MyReviews/MyReviews';
+import Payment from './Components/DashBoard/User/MyOrders/Payment';
 
 function App() {
   return (
@@ -27,14 +29,16 @@ function App() {
         <Route path='/signin' element={<SignIn></SignIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route element={<RequireAuth />}>
+          
           <Route path='/autoparts/:id' element={<PartsDetail></PartsDetail>}></Route>
           <Route path='/dashboard' element={<DashBoard></DashBoard>}>
             <Route path='/dashboard/myprofile' element={<Profile />}></Route>
             <Route path='/dashboard/myorders' element={<MyOrders></MyOrders>}></Route>
-            <Route path='/dashboard/myreview' element={<p>My Reviews</p>}></Route>
+            <Route path='/dashboard/myreview' element={<MyReviews />}></Route>
             <Route path='/dashboard/manageorders' element={<ManageAllOrders></ManageAllOrders>}></Route>
             <Route path='/dashboard/manageparts' element={<ManageAllParts></ManageAllParts>}></Route>
             <Route path='/dashboard/makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
+            <Route path='/dashboard/payment/:id' element={<Payment></Payment>}></Route>
           </Route>
         </Route>
 
