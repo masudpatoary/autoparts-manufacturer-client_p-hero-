@@ -20,9 +20,10 @@ const SignIn = () => {
         error1,
     ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
-    const onSubmit = data => {
-        signInWithEmailAndPassword(data.email, data.password);
 
+    const onSubmit = async data => {
+        signInWithEmailAndPassword(data.email, data.password);
+        
     }
 
 
@@ -32,7 +33,7 @@ const SignIn = () => {
     }
 
     if (error1 || googleError) {
-toast(`email and password not matched`)
+        toast(`email and password not matched`)
         // <p>Error: {error1.message || googleError.message}</p>
     }
     if (user1 || googleUser) {

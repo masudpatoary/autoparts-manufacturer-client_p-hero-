@@ -36,6 +36,20 @@ const SignUp = () => {
         await updateProfile({ displayName: data.name });
         await sendEmailVerification();
         toast('Acount created successfully')
+
+        console.log(data);
+        await fetch('http://localhost:5000/user', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log('New user added to database', result);
+
+            })
        
     }
 
