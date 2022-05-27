@@ -1,18 +1,17 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../../../firebase.init';
-import useSingleAdmin from '../../../../hooks/useSingleAdmin';
-import ProfileUpdate from './ProfileUpdate';
+import auth from '../../../firebase.init';
+import useSingleAdmin from '../../../hooks/useUser';
 const Profile = () => {
     const [user] = useAuthState(auth);
     const [SingleAdmin] = useSingleAdmin()
     return (
-        <div class="card w-96 drop-shadow-lg mx-auto my-5">
-            <div class="card-body bg-base-200">
+        <div  className="card w-96 drop-shadow-lg mx-auto my-5">
+            <div  className="card-body bg-base-200">
                 <h2 className='font-bold text-lg mb-5'>My Profile</h2>
                 {user.photoURL &&
-                    <div class="avatar flex justify-center">
-                        <div class="w-24 rounded-full ">
+                    <div  className="avatar flex justify-center">
+                        <div  className="w-24 rounded-full ">
                             <img src={user.photoURL} classNamew='' alt="" />
                         </div>
                     </div>

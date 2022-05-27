@@ -7,7 +7,7 @@ const useReviews = () => {
         const url ="http://localhost:5000/reviewlimitlastwo"
         fetch(url)
         .then(res=>res.json())
-        .then(data=>setReviews(data))
+        .then(async data=>setReviews(await data))
       
     }, [reviews])
     

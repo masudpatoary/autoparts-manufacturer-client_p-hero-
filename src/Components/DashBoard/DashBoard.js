@@ -6,9 +6,9 @@ import auth from '../../firebase.init';
 import { CgMenuGridO } from 'react-icons/cg';
 import AddParts from './Admin/AddParts/AddParts';
 import useAdmin from '../../hooks/useAdmin';
-import ProfileUpdate from './Admin/Profile/ProfileUpdate';
 import AddReviews from './User/AddReviews';
 import OrderCancelModal from './User/MyOrders/OrderCancelModal';
+import ProfileUpdate from './Profile/ProfileUpdate';
 
 const DashBoard = () => {
   const [user] = useAuthState(auth);
@@ -16,13 +16,12 @@ const DashBoard = () => {
 
   const dashBoardMenu =
     <>
+      <li><Link to="/dashboard/myprofile">My Profile</Link></li>
       {/* <!-- Sidebar content here --> */}
       {adminexist && <li className='font-bold ml-2 '>Admin Section</li>}
 
       {adminexist ?
         <>
-
-          <li><Link to="/dashboard/myprofile">My Profile</Link></li>
           <li><label for="add-review-modal">Add New Parts</label></li>
           <li><Link to="/dashboard/manageorders">Manage All Orders</Link></li>
           <li><Link to="/dashboard/manageparts">Manage All Parts</Link></li>
@@ -31,7 +30,7 @@ const DashBoard = () => {
         :
         <>
           <li><Link to="/dashboard/myorders">My Orders</Link></li>
-          <li>My Reviews</li>
+          <li className='font-bold'>My Reviews</li>
           <li><Link to="/dashboard/myreview">My Reviews</Link></li>
           <li><label for="add-review-modal">Add Reviews</label></li>
         </>

@@ -32,11 +32,11 @@ const AddReviews = () => {
     }
     return (
         <div>
-            <input type="checkbox" id="add-review-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
+            <input type="checkbox" id="add-review-modal"  className="modal-toggle" />
+            <div  className="modal modal-bottom sm:modal-middle">
+                <div  className="modal-box">
                     <h1 className='text-center font-bold'>Send Us your feedback</h1>
-                <label for="add-review-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                <label for="add-review-modal"  className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
 
                     <form className='mt-5' onSubmit={handleSubmit(onSubmit)}>
                         <input className ={styleClass} {...register("name")}

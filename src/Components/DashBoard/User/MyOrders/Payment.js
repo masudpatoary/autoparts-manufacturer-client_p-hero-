@@ -44,14 +44,14 @@ const Payment = () => {
 
     return (
         <div className='w-full flex justify-center md:mt-10'>
-            <div class="card w-96 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">{data.partsName}</h2>
+            <div  className="card w-96 shadow-xl">
+                <div  className="card-body">
+                    <h2  className="card-title">{data.partsName}</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
-                <div class="divider"></div>
-                <div class="card-body">
-                    <h2 class="card-title text-center">Checkout Form</h2>
+                <div  className="divider"></div>
+                <div  className="card-body">
+                    <h2  className="card-title text-center">Checkout Form</h2>
                     <div>
                         <Elements stripe={stripePromise}>
                             <form >

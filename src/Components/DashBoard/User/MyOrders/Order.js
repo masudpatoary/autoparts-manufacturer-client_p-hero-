@@ -29,9 +29,9 @@ const Order = (props) => {
 
 
     return (
-        <div class="card w-96 bg-base-100 m-3 shadow-xl">
-            <div class="card-body">
-                <h2 class="card-title">
+        <div  className="card w-96 bg-base-100 m-3 shadow-xl">
+            <div  className="card-body">
+                <h2  className="card-title">
                     {partsName}
                 </h2>
                 <p>Model: {model}</p>
@@ -49,7 +49,7 @@ const Order = (props) => {
                 <p className='font-bold'>Address</p>
                 <p>Receipient: {address}</p>
                 <button disabled={paymentStutus === "Paid"} className='btn btn-sm w-32'><Link to={`/dashboard/payment/${orderid}`}>Pay Now</Link></button>
-                <button disabled={paymentStutus === 'Pre Payment'} className='btn btn-sm w-32'><label for="my-modal-6" class="btn modal-button">Cancel order</label></button>
+                <button disabled={paymentStutus === 'Pre Payment'} className='btn btn-sm w-32'><label for="my-modal-6"  className="btn modal-button">Cancel order</label></button>
             </div>
             <OrderCancelModal props= {props}></OrderCancelModal>
         </div>

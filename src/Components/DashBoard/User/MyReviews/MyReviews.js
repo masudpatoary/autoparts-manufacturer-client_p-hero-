@@ -24,7 +24,7 @@ const MyReviews = () => {
         
         <div classemail='mt-10'>
             <h1 className='text-center text-xl font-bold my-2'>All your order list</h1>
-            <div className='w-100 flex flex-wrap p-md-5 p-sm-2 justify-center '>
+            <div className='w-100 md:flex flex-wrap p-md-5 p-sm-2 justify-center '>
                 
                 {
                     data?.map( order => <Myreview

@@ -24,11 +24,11 @@ const AddParts = () => {
     }
     return (
         <div>
-            <input type="checkbox" id="add-parts-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
+            <input type="checkbox" id="add-parts-modal"  className="modal-toggle" />
+            <div  className="modal modal-bottom sm:modal-middle">
+                <div  className="modal-box">
                     <h1>Fill the form and <span className='font-bold'>"SUBMIT"</span> < br/>to add a new <span className='font-bold'>Parts</span> in stock</h1>
-                <label for="add-parts-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                <label for="add-parts-modal"  className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
 
                     <form className='mt-5' onSubmit={handleSubmit(onSubmit)}>
                         <input className ={styleClass} {...register("name")} placeholder='Parts Name' reset required /><br />

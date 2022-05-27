@@ -11,13 +11,15 @@ import RequireAuth from './Components/Authentication/RequirAuth';
 import ManageAllOrders from './Components/DashBoard/Admin/ManageAllOrders/ManageAllOrders';
 import MakeAdmin from './Components/DashBoard/Admin/MakeAdmin';
 import PartsDetail from './Components/Home/AllParts.js/PartsDetail';
-import Profile from './Components/DashBoard/Admin/Profile/Profile';
 import { ToastContainer } from 'react-toastify';
 import PageNotFound from './Components/Shared/PageNotFound';
 import 'react-toastify/dist/ReactToastify.css';
 import MyOrders from './Components/DashBoard/User/MyOrders/MyOrders';
 import MyReviews from './Components/DashBoard/User/MyReviews/MyReviews';
 import Payment from './Components/DashBoard/User/MyOrders/Payment';
+import Profile from './Components/DashBoard/Profile/Profile';
+import MyPortfolio from './Components/MyPortfolio/MyPortfolio';
+import Blog from './Components/Blog/Blog';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/signin' element={<SignIn></SignIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/myportfolio' element={<MyPortfolio />}></Route>
+        <Route path='/blog' element={<Blog />}></Route>
         <Route element={<RequireAuth />}>
           
           <Route path='/autoparts/:id' element={<PartsDetail></PartsDetail>}></Route>
