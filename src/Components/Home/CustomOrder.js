@@ -1,14 +1,22 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
+import useUsers from '../../hooks/useUsers';
 
 const CustomOrder = () => {
     const styleClass = 'm-1 border py-2 px-4 w-full text-black'
     const { register, handleSubmit, reset } = useForm();
+    const [users, setUsers] = useUsers()
+    const [user] = useAuthState(auth);
+
+    const userForCustomOrder = users?.email || user?.email
+
     const onSubmit = async data => {
         console.log(data);
 
-        await fetch('http://localhost:5000/customorder', {
+        await fetch('https://vast-sands-13931.herokuapp.com/customorder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -42,7 +50,7 @@ const CustomOrder = () => {
                                 <input className={styleClass} type="number" {...register("budget")} placeholder='Your Budget' required /><br />
                                 <input className={styleClass} type="number" {...register("quantity")} placeholder='Manufacturing Quantity' required /><br />
                                 <textarea className='m-1 border py-2 px-4 w-full h-24 resize-none text-black'  {...register("instructions")} placeholder='Instructions' required /><br />
-                                <input type="submit" className='btn btn-sm mt-3 btn-primary' />
+                                <input type="submit" className='btn btn-sm mt-3 btn-primary' disabled={!userForCustomOrder}/>
                             </form>
                         </div>
                     </div>
