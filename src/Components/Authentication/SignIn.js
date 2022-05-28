@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSendPasswordResetEmail, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import { toast } from 'react-toastify';
@@ -23,15 +23,20 @@ const SignIn = () => {
 
     const onSubmit = async data => {
         signInWithEmailAndPassword(data.email, data.password);
-        
+
     }
 
-
-
-    if (loading1 || googleLoading) {
+    const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(
+        auth
+    )
+    const inputEmail = getValues('email')
+    if (loading1 || googleLoading || sending) {
         return <Loading></Loading>
     }
 
+    if (error) {
+        toast(`${error.message}`)
+    }
     if (error1 || googleError) {
         toast(`email and password not matched`)
         // <p>Error: {error1.message || googleError.message}</p>
@@ -47,6 +52,10 @@ const SignIn = () => {
                     <input type="email" {...register("email")} className="input input-bordered w-full" />
                     <input type="password" {...register("password")} className="input input-bordered w-full my-3" />
                     <input type="submit" value="Sign In" className=" btn btn-primary input input-bordered w-full" />
+                    <p className='mt-3'>forgate password, <button onClick={async () => {
+                        await sendPasswordResetEmail(inputEmail );
+                        toast(`password reset email hasbeen sent to ${inputEmail}`);
+                    }} className='font-bold underline '>Reset Now</button></p>
                 </form>
                 <div>
                     <div className="divider">OR</div>

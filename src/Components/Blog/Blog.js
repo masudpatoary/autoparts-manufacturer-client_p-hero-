@@ -5,21 +5,21 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Blog = () => {
 
-    const products = [
-        { id: 1, name: 'samsung', price: 10, description: 'lorem ipsum' },
-        { id: 2, name: 'samsung', price: 20, description: 'lorem ipsum' },
-        { id: 3, name: 'Oppo', price: 8, description: 'lorem ipsum' },
-        { id: 4, name: 'Oppo', price: 15, description: 'lorem ipsum' },
-        { id: 5, name: 'Apple', price: 30, description: 'lorem ipsum' },
-        { id: 6, name: 'Apple', price: 40, description: 'lorem ipsum' }
-    ]
+    // const products = [
+    //     { id: 1, name: 'samsung', price: 10, description: 'lorem ipsum' },
+    //     { id: 2, name: 'samsung', price: 20, description: 'lorem ipsum' },
+    //     { id: 3, name: 'Oppo', price: 8, description: 'lorem ipsum' },
+    //     { id: 4, name: 'Oppo', price: 15, description: 'lorem ipsum' },
+    //     { id: 5, name: 'Apple', price: 30, description: 'lorem ipsum' },
+    //     { id: 6, name: 'Apple', price: 40, description: 'lorem ipsum' }
+    // ]
 
-    const searchProductByName = products.find(product => {
+    // const searchProductByName = products.find(product => {
 
-        return product.name === 'samsung'
-    })
+    //     return product.name === 'samsung'
+    // })
 
-    console.log(searchProductByName)
+    // console.log(searchProductByName)
 
     return (
         <div className='w-4/5 mx-auto '>
