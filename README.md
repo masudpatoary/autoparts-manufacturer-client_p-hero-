@@ -1,13 +1,7 @@
 # Project Name: [AutoParts](https://valley-auto-parts-12240.firebaseapp.com/)
 # Project Name: [AutoParts](https://valley-auto-parts-12240.web.app/)
 
-# Server the Project: [Space Analysis](https://vast-sands-13931.herokuapp.com/)
-
-
-### This project is Customized with
-* [React](https://reactjs.org/)
-* [React Bootstrap](https://react-bootstrap.github.io/)
-
+# Server of this Project: [AutoParts](https://vast-sands-13931.herokuapp.com/)
 
 ### Feature of the  Project:
 * this project is built for both user and for admin
@@ -34,4 +28,13 @@
     * but can't cancel oeder if it is a paid order or confirmed or shipped or delivered by the manufacturer
     * from dashboard user can see all his reviews and a new review
 
-* HomePage contain latest added inventories, runningout inventories
+
+
+### This project is Customized with
+* [React](https://reactjs.org/)
+* [Tailwind](https://tailwindcss.com/)
+* [Tailwind](https://tailwindcss.com/)
+### Client Side Hosting
+* [Firebase](https://firebase.google.com/)
+### Server Side Hosting
+* [Heroku](https://www.heroku.com/)
