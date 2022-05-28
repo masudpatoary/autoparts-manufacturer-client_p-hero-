@@ -5,7 +5,11 @@ const useOrders = () => {
 
     useEffect(() => {
         const url ="http://localhost:5000/order"
-        fetch(url)
+        fetch(url,{
+            headers: {
+                authorization: `Bearer`
+            }
+        })
         .then(res=>res.json())
         .then(async data=>setOrders( await data))
       

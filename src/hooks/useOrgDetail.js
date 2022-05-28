@@ -6,6 +6,7 @@ const useOrgDetail = () => {
     useEffect(() => {
         const url ="http://localhost:5000/companyoverview"
         fetch(url)
+        
         .then(res=>res.json())
         .then(data=>setOrgDetail(data))
       

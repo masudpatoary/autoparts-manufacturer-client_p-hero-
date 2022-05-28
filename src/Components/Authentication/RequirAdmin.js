@@ -10,7 +10,7 @@ import Loading from '../Shared/Loading';
 
 const RequirAdmin = async ({children}) => {
     const [user, loading, error] = useAuthState(auth);
-    const [adminexist] = useAdmin(auth);
+    const [adminexist] = useAdmin();
     
     if (loading) {
         return <Loading></Loading>

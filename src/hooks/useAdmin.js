@@ -12,17 +12,23 @@ const useAdmin = () => {
             .then(res => res.json())
             .then(data => {
                 setAllAdmins(data)
+                if (data?.email === user?.email) {
+                    return setAdminExist(true);
+                }
+                return
             })
 
     }, [allAdmins])
 
-    const admin = allAdmins.find(async u => {
+    const admin = () => allAdmins.find(async u => {
         if (await u.email === user.email) {
+            // console.log(u.email)
+            // console.log(user.email)
             return setAdminExist(true);
         }
         return
     })
-
+    admin()
     return [allAdmins, adminexist];
 
 };
