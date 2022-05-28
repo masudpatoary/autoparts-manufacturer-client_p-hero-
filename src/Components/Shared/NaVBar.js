@@ -42,7 +42,7 @@ const NavBar = () => {
                 </div>
 
                 <div>
-                    <p className="btn btn-ghost normal-case font-bold text-center text-xl"><a >Valey Auto Parts</a></p>
+                    <p className="btn btn-ghost normal-case font-bold text-center text-xl"><a >AutoParts</a></p>
                 </div>
             </div>
 

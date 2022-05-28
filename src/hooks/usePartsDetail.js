@@ -4,7 +4,7 @@ const usePartsDetail = (id) => {
     const [detail, setDetail] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/autoparts/${id}`;
+        const url = `https://vast-sands-13931.herokuapp.com/autoparts/${id}`;
          fetch(url)
             .then(res => res.json())
             .then(data => setDetail(data))

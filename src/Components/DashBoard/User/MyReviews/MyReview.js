@@ -1,26 +1,8 @@
 import React from 'react';
-import { toast } from 'react-toastify';
 
 const Myreview = (props) => {
     const { name, email, partsName, rating, details } = props
-    const cancelOrder = async () => {
 
-        const orderid = props?.id
-        console.log(await orderid)
-        const proceed = window.confirm('Are you sure?');
-        if (proceed) {
-            const url = `http://localhost:5000/order/${orderid}`;
-            await fetch(url, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                })
-            toast(`your order ${props?.partsName} successfully canceled `)
-        }
-        // navigate('/inventories');
-    }
     return (
         <div className="card md:w-96 sm:w-full bg-base-100 shadow-xl m-5">
             <div className="card-body">

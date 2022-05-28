@@ -13,7 +13,7 @@ const MyReviews = () => {
     const userEmail = user?.email
     const userEmailFromDB = users?.email
     const email = userEmail || userEmailFromDB
-    const url = `http://localhost:5000/myreview/${email}`
+    const url = `https://vast-sands-13931.herokuapp.com/myreview/${email}`
     const { data, isLoading, refetch } = useQuery(['available'], () => fetch(url)
         .then(res => res.json()))
 

@@ -38,7 +38,7 @@ const SignUp = () => {
         toast('Acount created successfully')
 
         console.log(data);
-        await fetch('http://localhost:5000/user', {
+        await fetch('https://vast-sands-13931.herokuapp.com/user', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

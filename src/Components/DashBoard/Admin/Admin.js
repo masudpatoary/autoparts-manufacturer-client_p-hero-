@@ -14,7 +14,7 @@ const Admin = ({ user, index }) => {
         console.log(userDb, data,)
 
         if (adminChosen) {
-            await fetch('http://localhost:5000/admin', {
+            await fetch('https://vast-sands-13931.herokuapp.com/admin', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -28,7 +28,7 @@ const Admin = ({ user, index }) => {
                 })
         }
         else{
-            await fetch(`http://localhost:5000/user/${_id}`, {
+            await fetch(`https://vast-sands-13931.herokuapp.com/user/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

@@ -12,7 +12,7 @@ const Order = (props) => {
     //     console.log(await orderid)
     //     const proceed = window.confirm('Are you sure?');
     //     if (proceed) {
-    //         const url = `http://localhost:5000/order/${orderid}`;
+    //         const url = `https://vast-sands-13931.herokuapp.com/order/${orderid}`;
     //         await fetch(url, {
     //             method: 'DELETE'
     //         })
@@ -49,7 +49,7 @@ const Order = (props) => {
                 <p className='font-bold'>Address</p>
                 <p>Receipient: {address}</p>
                 <button disabled={paymentStutus === "Paid"} className='btn btn-sm w-32'><Link to={`/dashboard/payment/${orderid}`}>Pay Now</Link></button>
-                <button disabled={paymentStutus === 'Pre Payment'} className='btn btn-sm w-32'><label for="my-modal-6"  className="btn modal-button">Cancel order</label></button>
+                <button disabled={(paymentStutus === 'Pre Paid') ||(shippingStutus === 'Confirmed')||(shippingStutus === 'Shipped')||(shippingStutus === 'Delivered') } className='btn btn-sm w-32'><label for="my-modal-6"  className="btn modal-button">Cancel order</label></button>
             </div>
             <OrderCancelModal props= {props}></OrderCancelModal>
         </div>

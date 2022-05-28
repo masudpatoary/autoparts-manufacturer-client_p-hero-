@@ -8,7 +8,7 @@ const Parts = ({ parts, index }) => {
     const handleDeleteParts = async id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/autoparts/${id}`;
+            const url = `https://vast-sands-13931.herokuapp.com/autoparts/${id}`;
             await fetch(url, {
                 method: 'DELETE'
             })

@@ -6,7 +6,7 @@ const OrderCancelModal = ({ props }) => {
     const orderid = props?.id
     const cancelOrder = async () => {
         console.log(await orderid)
-        const url = `http://localhost:5000/order/${orderid}`;
+        const url = `https://vast-sands-13931.herokuapp.com/order/${orderid}`;
         await fetch(url, {
             method: 'DELETE'
         })

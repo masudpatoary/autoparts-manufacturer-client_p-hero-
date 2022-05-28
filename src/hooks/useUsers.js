@@ -4,7 +4,7 @@ const useUsers = () => {
     const [users, setUsers] =useState([]);
 
     useEffect(() => {
-        const url ="http://localhost:5000/user"
+        const url ="https://vast-sands-13931.herokuapp.com/user"
         fetch(url)
         .then(res=>res.json())
         .then(async data=>setUsers(await data))

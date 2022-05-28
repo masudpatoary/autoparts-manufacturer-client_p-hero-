@@ -7,7 +7,7 @@ const Reviews = () => {
     const result = reviews.slice(-4)
     return (
         <div className='my-10'>
-            <p className='font-bold text-2xl text-center mb-4'>Millions Business Trusts Us</p>
+            <p className='font-bold text-5xl text-center mb-4'>Customers are Happy with us</p>
             <div className='flex flex-wrap justify-center items-center'>
                 {
                     result.map(review=>(<Review

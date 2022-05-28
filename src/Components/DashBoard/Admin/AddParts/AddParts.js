@@ -7,7 +7,7 @@ const AddParts = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = async data => {
         console.log(data);
-        await fetch('http://localhost:5000/autoparts', {
+        await fetch('https://vast-sands-13931.herokuapp.com/autoparts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

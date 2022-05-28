@@ -12,10 +12,10 @@ const Payment = () => {
     const stripePromise = loadStripe('pk_test_51L3uocC4Yx0FgrUsH3ykL1ra9pA4u4qVNIGogbqYDOSn6od4uuEp5T5wivY9LhvMkBY3G7vaKdLLKZxNnOPuj48e00Vmt30eFr');
 
     //    let stutus= "Pre Payment"
-    // const url = `http://localhost:5000/order/${id}`;
-    const url = `http://localhost:5000/order/${id}`;
+    // const url = `https://vast-sands-13931.herokuapp.com/order/${id}`;
+    const url = `https://vast-sands-13931.herokuapp.com/order/${id}`;
 
-    const { data, isLoading } = useQuery(['booking'], () => fetch(url)
+    const { data, isLoading } = useQuery(['order'], () => fetch(url)
 
         .then(res => res.json()));
 
@@ -27,7 +27,7 @@ const Payment = () => {
         console.log(id)
         console.log(payment)
         event.preventDefault()
-        await fetch(`http://localhost:5000/order/shipping/${id}`, {
+        await fetch(`https://vast-sands-13931.herokuapp.com/order/payment/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -44,14 +44,14 @@ const Payment = () => {
 
     return (
         <div className='w-full flex justify-center md:mt-10'>
-            <div  className="card w-96 shadow-xl">
-                <div  className="card-body">
-                    <h2  className="card-title">{data.partsName}</h2>
+            <div className="card w-96 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title">{data.partsName}</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
-                <div  className="divider"></div>
-                <div  className="card-body">
-                    <h2  className="card-title text-center">Checkout Form</h2>
+                <div className="divider"></div>
+                <div className="card-body">
+                    <h2 className="card-title text-center">Checkout Form</h2>
                     <div>
                         <Elements stripe={stripePromise}>
                             <form >

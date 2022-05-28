@@ -37,10 +37,11 @@ const SignIn = () => {
     if (error) {
         toast(`${error.message}`)
     }
+    
     if (error1 || googleError) {
         toast(`email and password not matched`)
-        // <p>Error: {error1.message || googleError.message}</p>
     }
+
     if (user1 || googleUser) {
         navigate(from, { replace: true });
     }

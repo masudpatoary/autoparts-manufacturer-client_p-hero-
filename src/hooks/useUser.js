@@ -6,7 +6,7 @@ const useSingleAdmin = () => {
     const [SingleAdmin, setSingleAdmin ] =useState([]);
 
     useEffect(() => {
-        const url =`http://localhost:5000/admin/${user.email}`
+        const url =`https://vast-sands-13931.herokuapp.com/admin/${user.email}`
         fetch(url)
         .then(res=>res.json())
         .then(data=>setSingleAdmin (data))
