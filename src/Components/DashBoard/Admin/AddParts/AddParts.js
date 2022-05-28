@@ -19,7 +19,7 @@ const AddParts = () => {
                 console.log('New parts added to database', result);
 
             })
-        toast('New order Successfully POlaced')
+        toast('New order Successfully Placed')
         reset()
     }
     return (

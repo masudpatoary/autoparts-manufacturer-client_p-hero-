@@ -25,7 +25,7 @@ const WhyWeBest = () => {
     return (
         <div className='md:w-4/5 mx-auto'>
             <div >
-                <h2 className='font-bold text-5xl text-center'>Why Valey Auto Parts is the best Car Parts Manufacturer And Supplier Choice?</h2>
+                <h2 className='font-bold text-5xl text-center'>Why AutoParts is the best Car Parts Manufacturer And Supplier Choice?</h2>
             </div>
             <div className='flex flex-wrap my-10 justify-center'>
                 {

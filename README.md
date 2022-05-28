@@ -17,6 +17,7 @@
     * he can set the shipping stutus an status will update to DB to the respective order
     * and if he change shipping stutus to "Delivered" status confirmation button will automacally disable
     * he can make another user to ADMIN 
+    * admin can update his profile
 
 * Features for Users:
     * any user can see all products (don't need to sign in)
