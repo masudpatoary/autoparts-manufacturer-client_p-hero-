@@ -15,7 +15,7 @@ const AddReviews = () => {
     const id = dbUser?._id
     const onSubmit = async data => {
         console.log(data);
-        await fetch(`https://vast-sands-13931.herokuapp.com/reviews`, {
+        await fetch(`https://auto-server-o5cy.onrender.com/reviews`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

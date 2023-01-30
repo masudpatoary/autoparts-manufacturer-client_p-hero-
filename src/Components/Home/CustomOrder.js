@@ -16,7 +16,7 @@ const CustomOrder = () => {
     const onSubmit = async data => {
         console.log(data);
 
-        await fetch('https://vast-sands-13931.herokuapp.com/customorder', {
+        await fetch('https://auto-server-o5cy.onrender.com/customorder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

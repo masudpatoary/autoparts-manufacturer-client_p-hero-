@@ -8,7 +8,7 @@ const Order = ({ order, index }) => {
 
     const { register, getValues, handleSubmit } = useForm();
     const onSubmit = async data => {
-        await fetch(`https://vast-sands-13931.herokuapp.com/order/${_id}`, {
+        await fetch(`https://auto-server-o5cy.onrender.com/order/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

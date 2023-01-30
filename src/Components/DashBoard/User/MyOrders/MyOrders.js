@@ -13,7 +13,7 @@ const MyOrders = () => {
     const userEmail = user?.email
     const userEmailFromDB = users?.email
     const email = userEmail || userEmailFromDB
-    const url = `https://vast-sands-13931.herokuapp.com/myorder/${email}`
+    const url = `https://auto-server-o5cy.onrender.com/myorder/${email}`
     const { data, isLoading, refetch } = useQuery(['available'], () => fetch(url)
         .then(res => res.json()))
 

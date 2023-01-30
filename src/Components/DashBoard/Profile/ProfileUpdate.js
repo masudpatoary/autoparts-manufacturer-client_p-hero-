@@ -17,7 +17,7 @@ const ProfileUpdate = () => {
     const onSubmit = async data => {
 
 
-        await fetch(`https://vast-sands-13931.herokuapp.com/admin/${email}`, {
+        await fetch(`https://auto-server-o5cy.onrender.com/admin/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

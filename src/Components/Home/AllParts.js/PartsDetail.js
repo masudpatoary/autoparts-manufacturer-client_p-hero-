@@ -23,7 +23,7 @@ const PartsDetail = () => {
         const partsName = name
         const formData = { ...data, price, partsName }
         // console.log(await formData);
-        await fetch('https://vast-sands-13931.herokuapp.com/order', {
+        await fetch('https://auto-server-o5cy.onrender.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -47,7 +47,7 @@ const PartsDetail = () => {
     const handleUpdateQty = async () => {
         let newStockQty =await inStockQty - orderQty
         console.log(inStockQty,newStockQty, 'inputQty')
-        const url = `https://vast-sands-13931.herokuapp.com/autoparts/${id}`;
+        const url = `https://auto-server-o5cy.onrender.com/autoparts/${id}`;
         await fetch(url, {
             method: 'PUT',
             headers: {

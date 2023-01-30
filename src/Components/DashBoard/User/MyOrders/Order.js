@@ -12,7 +12,7 @@ const Order = (props) => {
     //     console.log(await orderid)
     //     const proceed = window.confirm('Are you sure?');
     //     if (proceed) {
-    //         const url = `https://vast-sands-13931.herokuapp.com/order/${orderid}`;
+    //         const url = `https://auto-server-o5cy.onrender.com/order/${orderid}`;
     //         await fetch(url, {
     //             method: 'DELETE'
     //         })

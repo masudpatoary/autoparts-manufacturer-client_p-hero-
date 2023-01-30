@@ -38,7 +38,7 @@ const SignUp = () => {
         toast('Acount created successfully')
 
         console.log(data);
-        await fetch('https://vast-sands-13931.herokuapp.com/user', {
+        await fetch('https://auto-server-o5cy.onrender.com/user', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

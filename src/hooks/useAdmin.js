@@ -7,7 +7,7 @@ const useAdmin = () => {
     const [allAdmins, setAllAdmins] = useState([]);
     const [adminexist, setAdminExist] = useState(false)
     useEffect(() => {
-        const url = "https://vast-sands-13931.herokuapp.com/admin"
+        const url = "https://auto-server-o5cy.onrender.com/admin"
         fetch(url)
             .then(res => res.json())
             .then(data => {

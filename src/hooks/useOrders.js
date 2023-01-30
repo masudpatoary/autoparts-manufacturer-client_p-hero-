@@ -4,7 +4,7 @@ const useOrders = () => {
     const [orders, setOrders] =useState([]);
 
     useEffect(() => {
-        const url ="https://vast-sands-13931.herokuapp.com/order"
+        const url ="https://auto-server-o5cy.onrender.com/order"
         fetch(url,{
             headers: {
                 authorization: `Bearer`

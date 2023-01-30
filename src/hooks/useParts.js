@@ -4,7 +4,7 @@ const useParts = () => {
     const [autoparts, setAutoparts] =useState([]);
 
     useEffect(() => {
-        const url ="https://vast-sands-13931.herokuapp.com/autoparts"
+        const url ="https://auto-server-o5cy.onrender.com/autoparts"
         fetch(url)
         .then(res=>res.json())
         .then(async data=>await setAutoparts(data))

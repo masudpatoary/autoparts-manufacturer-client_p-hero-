@@ -17,8 +17,8 @@ const NavBar = () => {
     const navMenuItems = <>
         <li><Link to='/home'>Home</Link></li>
         <li><Link to='/about'>About</Link></li>
-        <li><Link to='/blog'>Blog</Link></li>
-        <li><Link to='/myportfolio'>My Portfolio</Link></li>
+        {/* <li><Link to='/blog'>Blog</Link></li>
+        <li><Link to='/myportfolio'>My Portfolio</Link></li> */}
         {user ? <>
             <li><Link to='/dashboard'>Dash Board</Link></li>
             <li onClick={logout}> <Link to=''>Sign Out</Link></li>

@@ -30,10 +30,9 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/signin' element={<SignIn></SignIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
-        <Route path='/myportfolio' element={<MyPortfolio />}></Route>
-        <Route path='/blog' element={<Blog />}></Route>
+        {/* <Route path='/myportfolio' element={<MyPortfolio />}></Route>
+        <Route path='/blog' element={<Blog />}></Route> */}
         <Route element={<RequireAuth />}>
-          
           <Route path='/autoparts/:id' element={<PartsDetail></PartsDetail>}></Route>
           <Route path='/dashboard' element={<DashBoard></DashBoard>}>
             <Route path='/dashboard/myprofile' element={<Profile />}></Route>

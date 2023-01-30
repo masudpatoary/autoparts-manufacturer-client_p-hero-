@@ -1,7 +1,7 @@
 # Project Name: [AutoParts](https://valley-auto-parts-12240.firebaseapp.com/)
 # Project Name: [AutoParts](https://valley-auto-parts-12240.web.app/)
 
-# Server of this Project: [AutoParts](https://vast-sands-13931.herokuapp.com/)
+# Server of this Project: [AutoParts](https://auto-server-o5cy.onrender.com/)
 
 ### Feature of the  Project:
 * this project is built for both user and for admin

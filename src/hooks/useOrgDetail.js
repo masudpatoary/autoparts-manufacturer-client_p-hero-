@@ -4,7 +4,7 @@ const useOrgDetail = () => {
     const [orgDetail, setOrgDetail] =useState([]);
 
     useEffect(() => {
-        const url ="https://vast-sands-13931.herokuapp.com/companyoverview"
+        const url ="https://auto-server-o5cy.onrender.com/companyoverview"
         fetch(url)
         
         .then(res=>res.json())

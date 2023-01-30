@@ -14,7 +14,7 @@ const Admin = ({ user, index }) => {
         console.log(userDb, data,)
 
         if (adminChosen) {
-            await fetch('https://vast-sands-13931.herokuapp.com/admin', {
+            await fetch('https://auto-server-o5cy.onrender.com/admin', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -28,7 +28,7 @@ const Admin = ({ user, index }) => {
                 })
         }
         else{
-            await fetch(`https://vast-sands-13931.herokuapp.com/user/${_id}`, {
+            await fetch(`https://auto-server-o5cy.onrender.com/user/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

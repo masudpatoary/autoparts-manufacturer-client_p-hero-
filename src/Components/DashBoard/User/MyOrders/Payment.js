@@ -12,8 +12,8 @@ const Payment = () => {
     const stripePromise = loadStripe('pk_test_51L3uocC4Yx0FgrUsH3ykL1ra9pA4u4qVNIGogbqYDOSn6od4uuEp5T5wivY9LhvMkBY3G7vaKdLLKZxNnOPuj48e00Vmt30eFr');
 
     //    let stutus= "Pre Payment"
-    // const url = `https://vast-sands-13931.herokuapp.com/order/${id}`;
-    const url = `https://vast-sands-13931.herokuapp.com/order/${id}`;
+    // const url = `https://auto-server-o5cy.onrender.com/order/${id}`;
+    const url = `https://auto-server-o5cy.onrender.com/order/${id}`;
 
     const { data, isLoading } = useQuery(['order'], () => fetch(url)
 
@@ -27,7 +27,7 @@ const Payment = () => {
         console.log(id)
         console.log(payment)
         event.preventDefault()
-        await fetch(`https://vast-sands-13931.herokuapp.com/order/payment/${id}`, {
+        await fetch(`https://auto-server-o5cy.onrender.com/order/payment/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
